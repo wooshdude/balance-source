@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/yellow_box.png-f060c983aa1c0b2c4c691d21ecde229b.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://objects/yellow_box.png"
+dest_files=[ "res://.import/yellow_box.png-f060c983aa1c0b2c4c691d21ecde229b.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=false
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+stream=false
+size_limit=0
+detect_3d=false
+svg/scale=1.0

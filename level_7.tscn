@@ -1,0 +1,103 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://World.tscn" type="PackedScene" id=1]
+[ext_resource path="res://level_7.gd" type="Script" id=2]
+
+[node name="level_7" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="World" parent="." instance=ExtResource( 1 )]
+position = Vector2( -1, -1 )
+
+[node name="TileMap" parent="World/platform/tilemap2" index="0"]
+tile_data = PoolIntArray( -851975, 5, 0, -786439, 4, 0, -720903, 4, 0, -720901, 4, 0, -786428, 4, 0, -655365, 4, 0, -720892, 4, 0, -589829, 4, 0, -655356, 4, 0, -524293, 4, 0, -589820, 4, 0, -589815, 4, 0, -458757, 4, 0, -524284, 4, 0, -524279, 4, 0, -393221, 4, 0, -458748, 4, 0, -458743, 4, 0, -327685, 4, 0, -393212, 4, 0, -262149, 4, 0, -327676, 4, 0, -196613, 4, 0, -262140, 4, 0 )
+
+[node name="TileMap" parent="World/platform/tilemap" index="0"]
+tile_data = PoolIntArray( -720901, 7, 0, -720900, 7, 0, -720899, 7, 0, -720898, 7, 0, -720897, 7, 0, -786432, 7, 0, -786431, 7, 0, -786430, 7, 0, -786429, 7, 0, -786428, 7, 0, -655370, 0, 0, -655369, 0, 0, -655368, 0, 0, -655367, 0, 0, -589820, 7, 0, -589817, 7, 0, -589816, 7, 0, -589815, 7, 0, -589814, 7, 0, -589813, 7, 0, -589812, 7, 0, -589811, 8, 0, -589810, 8, 0, -589809, 8, 0, -589808, 8, 0, -458763, 0, 0, -458762, 0, 0, -458761, 0, 0, -458760, 0, 0, -458759, 0, 0, -458758, 0, 0, -458757, 0, 0, -458756, 0, 0, -458755, 0, 0, -458754, 0, 0, -393215, 7, 0, -393214, 7, 0, -393213, 7, 0, -393212, 7, 0, -393211, 7, 0, -393210, 7, 0, -393207, 7, 0, -11, 7, 0, -10, 7, 0, -9, 7, 0, -8, 7, 0, -7, 7, 0, -6, 7, 0, -5, 7, 0, -4, 7, 0, -3, 7, 0, -2, 7, 0, -1, 7, 0, -65536, 7, 0, -65535, 7, 0, -65534, 7, 0, -65533, 7, 0, -65532, 7, 0, -65531, 7, 0, -65530, 7, 0, -65529, 7, 0, -65528, 7, 0, -65527, 7, 0, -65526, 7, 0, -65525, 7, 0, -65524, 7, 0 )
+
+[node name="gate" parent="World" index="1"]
+position = Vector2( -72, -8 )
+
+[node name="gate2" parent="World" index="2"]
+position = Vector2( 96, -114 )
+rotation = 1.5708
+
+[node name="red_gate" parent="World" index="3"]
+position = Vector2( 110, -621 )
+
+[node name="red_gate2" parent="World" index="4"]
+position = Vector2( 110, -691 )
+
+[node name="red_gate3" parent="World" index="5"]
+position = Vector2( 110, -656 )
+
+[node name="yellow_gate" parent="World" index="6"]
+position = Vector2( 72, -8 )
+
+[node name="yellow_gate2" parent="World" index="7"]
+position = Vector2( 90, -691 )
+
+[node name="yellow_gate3" parent="World" index="8"]
+position = Vector2( 128, -66 )
+rotation = -1.5708
+
+[node name="blue_gate" parent="World" index="9"]
+position = Vector2( 70, -621 )
+
+[node name="blue_gate2" parent="World" index="10"]
+position = Vector2( 70, -656 )
+
+[node name="exit_door" parent="World" index="11"]
+position = Vector2( 232, -136 )
+
+[node name="red_plate" parent="World" index="12"]
+position = Vector2( 164, 7 )
+
+[node name="blue_plate" parent="World" index="13"]
+position = Vector2( 160, -121 )
+
+[node name="white_plate" parent="World" index="14"]
+position = Vector2( 134, -120 )
+
+[node name="yellow_plate" parent="World" index="15"]
+position = Vector2( -39, -101 )
+
+[node name="Camera2D" parent="World" index="16"]
+zoom = Vector2( 0.8, 0.8 )
+
+[node name="Player" parent="World" index="17"]
+position = Vector2( -142, -101 )
+
+[node name="player2" parent="World" index="18"]
+position = Vector2( -149, 0 )
+
+[node name="cube" parent="World" index="19"]
+position = Vector2( -137, -149 )
+
+[node name="yellow_box" parent="World" index="20"]
+position = Vector2( 41, -1 )
+
+[node name="big_box" parent="World" index="22"]
+position = Vector2( -121, -7 )
+
+[node name="ColorRect" parent="World/fade" index="1"]
+visible = false
+
+[connection signal="area_entered" from="World/exit_door/Area2D" to="." method="_on_Area2D_area_entered"]
+
+[editable path="World"]
+[editable path="World/platform/tilemap2"]
+[editable path="World/platform/tilemap"]
+[editable path="World/gate"]
+[editable path="World/exit_door"]
+[editable path="World/red_plate"]
+[editable path="World/blue_plate"]
+[editable path="World/white_plate"]
+[editable path="World/yellow_plate"]
+[editable path="World/Player"]
+[editable path="World/player2"]
+[editable path="World/cube"]
+[editable path="World/yellow_box"]
+[editable path="World/soul_particles"]
+[editable path="World/music"]
+[editable path="World/fade"]

@@ -1,0 +1,97 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://World.tscn" type="PackedScene" id=1]
+[ext_resource path="res://level_2.gd" type="Script" id=2]
+[ext_resource path="res://music.tscn" type="PackedScene" id=3]
+
+[node name="level_2" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="World" parent="." instance=ExtResource( 1 )]
+
+[node name="TileMap" parent="World/platform/tilemap2" index="0"]
+tile_data = PoolIntArray( -655361, 5, 0, -589825, 4, 0, -524289, 4, 0, -458753, 4, 0, -393217, 4, 0, -327681, 4, 0, -262145, 4, 0, -196609, 4, 0 )
+
+[node name="TileMap" parent="World/platform/tilemap" index="0"]
+tile_data = PoolIntArray( -196617, 7, 0, -196616, 7, 0, -196615, 7, 0, -9, 7, 0, -8, 7, 0, -7, 7, 0, -6, 7, 0, -5, 7, 0, -4, 7, 0, -3, 7, 0, -2, 7, 0, -1, 7, 0, -65536, 7, 0, -65535, 7, 0, -65534, 7, 0, -65533, 7, 0, -65532, 7, 0, -65531, 7, 0, -65530, 7, 0 )
+
+[node name="gate" parent="World" index="1"]
+position = Vector2( -8, -7 )
+
+[node name="gate2" parent="World" index="2"]
+position = Vector2( -5, -653 )
+
+[node name="red_gate" parent="World" index="3"]
+position = Vector2( 55, -614 )
+
+[node name="red_gate2" parent="World" index="4"]
+position = Vector2( 55, -688 )
+
+[node name="red_gate3" parent="World" index="5"]
+position = Vector2( 55, -653 )
+
+[node name="yellow_gate" parent="World" index="6"]
+position = Vector2( 35, -614 )
+
+[node name="yellow_gate2" parent="World" index="7"]
+position = Vector2( 35, -688 )
+
+[node name="yellow_gate3" parent="World" index="8"]
+position = Vector2( 35, -653 )
+
+[node name="blue_gate" parent="World" index="9"]
+position = Vector2( 15, -614 )
+
+[node name="blue_gate2" parent="World" index="10"]
+position = Vector2( 15, -653 )
+
+[node name="exit_door" parent="World" index="11"]
+position = Vector2( 94, -8 )
+
+[node name="red_plate" parent="World" index="12"]
+position = Vector2( 49, 7 )
+
+[node name="blue_plate" parent="World" index="13"]
+position = Vector2( -102, 7 )
+
+[node name="white_plate" parent="World" index="14"]
+position = Vector2( -44, 8 )
+
+[node name="yellow_plate" parent="World" index="15"]
+position = Vector2( 114, -624 )
+
+[node name="Player" parent="World" index="17"]
+position = Vector2( -63, -1 )
+
+[node name="player2" parent="World" index="18"]
+position = Vector2( 73, -3 )
+
+[node name="cube" parent="World" index="19"]
+position = Vector2( -121, -53 )
+
+[node name="yellow_box" parent="World" index="20"]
+position = Vector2( 89, -634 )
+
+[node name="big_box" parent="World" index="22"]
+position = Vector2( -23, -589 )
+
+[node name="music" parent="." instance=ExtResource( 3 )]
+
+[connection signal="area_entered" from="World/exit_door/Area2D" to="." method="_on_Area2D_area_entered"]
+
+[editable path="World"]
+[editable path="World/platform/tilemap2"]
+[editable path="World/platform/tilemap"]
+[editable path="World/gate"]
+[editable path="World/exit_door"]
+[editable path="World/red_plate"]
+[editable path="World/blue_plate"]
+[editable path="World/white_plate"]
+[editable path="World/yellow_plate"]
+[editable path="World/Player"]
+[editable path="World/player2"]
+[editable path="World/cube"]
+[editable path="World/yellow_box"]
+[editable path="World/soul_particles"]
+[editable path="World/music"]
+[editable path="World/fade"]

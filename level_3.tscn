@@ -1,0 +1,102 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://gate.tscn" type="PackedScene" id=1]
+[ext_resource path="res://World.tscn" type="PackedScene" id=2]
+[ext_resource path="res://level_3.gd" type="Script" id=3]
+[ext_resource path="res://music.tscn" type="PackedScene" id=4]
+
+[node name="level_3" type="Node2D"]
+position = Vector2( 14, 13 )
+script = ExtResource( 3 )
+
+[node name="World" parent="." instance=ExtResource( 2 )]
+
+[node name="TileMap" parent="World/platform/tilemap2" index="0"]
+tile_data = PoolIntArray( -1114113, 5, 0, -1048577, 4, 0, -983041, 4, 0, -917505, 4, 0, -851969, 4, 0, -786433, 4, 0, -720897, 4, 0, -655361, 4, 0, -589825, 4, 0, -393225, 4, 0, -393221, 4, 0, -327689, 4, 0, -327685, 4, 0, -262153, 4, 0, -262149, 4, 0, -196617, 4, 0, -196613, 4, 0, -131081, 4, 0, -65545, 4, 0 )
+
+[node name="TileMap" parent="World/platform/tilemap" index="0"]
+tile_data = PoolIntArray( -655368, 7, 0, -655367, 7, 0, -655366, 7, 0, -655365, 7, 0, -393225, 7, 0, -393224, 7, 0, -393223, 7, 0, -393222, 7, 0, -393221, 7, 0, -393220, 7, 0, -393219, 7, 0, -393218, 7, 0, -393217, 7, 0, -458752, 7, 0, -458751, 7, 0, -458750, 7, 0, -458749, 7, 0, -9, 7, 0, -8, 7, 0, -7, 7, 0, -6, 7, 0, -5, 7, 0, -4, 7, 0, -3, 7, 0, -2, 7, 0, -1, 7, 0, -65536, 7, 0, -65535, 7, 0, -65534, 7, 0, -65533, 7, 0, -65532, 7, 0, -65531, 7, 0 )
+
+[node name="gate" parent="World" index="1"]
+position = Vector2( -8, -104 )
+
+[node name="gate2" parent="World" index="2"]
+position = Vector2( -27, -604 )
+
+[node name="red_gate" parent="World" index="3"]
+position = Vector2( -72, -8 )
+
+[node name="red_gate2" parent="World" index="4"]
+position = Vector2( 33, -639 )
+
+[node name="red_gate3" parent="World" index="5"]
+position = Vector2( 33, -604 )
+
+[node name="yellow_gate" parent="World" index="6"]
+position = Vector2( 2, -790 )
+
+[node name="yellow_gate2" parent="World" index="7"]
+position = Vector2( 13, -639 )
+
+[node name="yellow_gate3" parent="World" index="8"]
+position = Vector2( 13, -604 )
+
+[node name="blue_gate" parent="World" index="9"]
+position = Vector2( -18, -790 )
+
+[node name="blue_gate2" parent="World" index="10"]
+position = Vector2( -7, -604 )
+
+[node name="exit_door" parent="World" index="11"]
+position = Vector2( -111, -8 )
+
+[node name="red_plate" parent="World" index="12"]
+position = Vector2( 31, 7 )
+
+[node name="blue_plate" parent="World" index="13"]
+position = Vector2( 31, -89 )
+
+[node name="white_plate" parent="World" index="14"]
+position = Vector2( -42, -88 )
+
+[node name="yellow_plate" parent="World" index="15"]
+position = Vector2( 117, -615 )
+
+[node name="Player" parent="World" index="17"]
+position = Vector2( -51, -102 )
+
+[node name="player2" parent="World" index="18"]
+position = Vector2( -75, -99 )
+
+[node name="cube" parent="World" index="19"]
+position = Vector2( -94, -178 )
+
+[node name="yellow_box" parent="World" index="20"]
+position = Vector2( -60, -595 )
+
+[node name="big_box" parent="World" index="22"]
+position = Vector2( -17, -758 )
+
+[node name="gate2" parent="World" instance=ExtResource( 1 )]
+position = Vector2( 70, -612 )
+
+[node name="music" parent="." instance=ExtResource( 4 )]
+
+[connection signal="area_entered" from="World/exit_door/Area2D" to="." method="_on_Area2D_area_entered"]
+
+[editable path="World"]
+[editable path="World/platform/tilemap2"]
+[editable path="World/platform/tilemap"]
+[editable path="World/gate"]
+[editable path="World/exit_door"]
+[editable path="World/red_plate"]
+[editable path="World/blue_plate"]
+[editable path="World/white_plate"]
+[editable path="World/yellow_plate"]
+[editable path="World/Player"]
+[editable path="World/player2"]
+[editable path="World/cube"]
+[editable path="World/yellow_box"]
+[editable path="World/soul_particles"]
+[editable path="World/music"]
+[editable path="World/fade"]

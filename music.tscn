@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://music/finding balance/Tidal Bells.wav" type="AudioStream" id=1]
+[ext_resource path="res://music/finding balance/Reveb-Phone.wav" type="AudioStream" id=2]
+[ext_resource path="res://music/finding balance/Ultrabeat.wav" type="AudioStream" id=3]
+[ext_resource path="res://music/finding balance/Reverb-Chords.wav" type="AudioStream" id=4]
+[ext_resource path="res://music/finding balance/Deep Buzz.wav" type="AudioStream" id=5]
+
+[node name="music" type="Node2D"]
+
+[node name="tidal_bells" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 1 )
+volume_db = -10.0
+
+[node name="deep_buzz" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 5 )
+volume_db = -10.0
+
+[node name="reverb_phone" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 2 )
+volume_db = -10.0
+
+[node name="reverb_chords" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 4 )
+volume_db = -10.0
+
+[node name="ultrabeat" type="AudioStreamPlayer2D" parent="."]
+visible = false
+stream = ExtResource( 3 )
+volume_db = -80.0
